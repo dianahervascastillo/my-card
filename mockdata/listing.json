@@ -1,0 +1,32 @@
+{
+  "properties": [
+    {
+      "listingId": 1,
+      "listingTitle": "Luxury Resort + Spa - 4 Bed/3 Bath Holiday Lodge - Superb Free Facilities",
+      "listingThumbNail": "https://odis.homeaway.com/odis/listing/3c033031-ed8e-4292-8f69-b86305778f3d.c10.jpg",
+      "sleeps": "6",
+      "bedrooms": "3",
+      "bathrooms": "3.5",
+      "ratingGlobal": "Wonderful",
+      "ratingNumber": 4.5,
+      "reviewsNumber": 10,
+      "reviewsRatingAverage": 4,
+      "price": 862,
+      "currency": "$"
+    },
+    {
+      "listingId": 2,
+      "listingTitle": "Holiday home with unlimited WiFi, shared swimming pools, no pets",
+      "listingThumbNail": "https://odis.homeaway.com/odis/listing/4f80bd16-2502-41ae-9295-1e3e42422eda.c10.jpg",
+      "sleeps": "5",
+      "bedrooms": "5",
+      "bathrooms": "2",
+      "ratingGlobal": "Meh",
+      "ratingNumber": 3,
+      "reviewsNumber": 4,
+      "reviewsRatingAverage": 2,
+      "price": 300,
+      "currency": "$"
+    }
+  ]
+}
