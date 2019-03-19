@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* RESET AND NORMALISE----------------------------------------
+ ------------------------------------------------------------*/
 html {
-  line-height: 1.1; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.1;
+  -webkit-text-size-adjust: 100%;
 }
 html {
   box-sizing: border-box;
@@ -44,6 +45,12 @@ img {
 }
 
 
+
+
+/* DEFAULT STYLES MOBILE--------------------------------------
+ ------------------------------------------------------------*/
+
+
 .listing{
   padding-right: 1rem;
   padding-left: 1rem;
@@ -63,7 +70,7 @@ img {
 }
 
 .property-card__image {
-  height: 180px;
+  height: 248px;
   width: 100%;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -98,10 +105,24 @@ img {
   margin-right: .25rem;
   margin-left: .25rem;
 }
-
+.property-card .property-card__price strong{
+  font-size: 1.125rem;
+}
 .property-card__price small{
   font-size: .875rem;
   font-weight: 400;
+}
+
+.property-card__rating.rating--good{
+  color: #008751;
+}
+.property-card__rating.rating--bad{
+  color: #ffd700;
+}
+.property-card__footer{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .property-card__reviews{
@@ -115,14 +136,56 @@ img {
   display: block;
 }
 
-@media screen and (min-width:601px) {
-  .property-card__features .feature{
-    position: relative;
-    text-align: center;
+
+
+
+
+
+/* SIMPLE CARD------------------------------------
+ ---------------------------------------------------*/
+.property-card.property-card--simple h4,
+.property-card.property-card--simple .property-card__rating{
+  display: none;
+}
+.property-card.property-card--simple .property-card__rating{
+  flex: unset;
+}
+
+
+/* DESKTOP STYLES ---------------------------------------------
+ ------------------------------------------------------------*/
+
+@media screen and (min-width:651px) {
+  .property-card {
+    flex-wrap: nowrap;
+    max-width: 800px;
+    font-size: 1rem;
   }
+  .property-card__title{
+    width: 100%;
+  }
+
+  .property-card__title h4{
+    /*not doing this as design was showing 2 lines*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+    /*max-height: 2.6rem;*/
+    line-height: 1.5rem;
+  }
+  .property-card__features{
+    display: flex;
+  }
+
   .property-card__features .feature{
     padding-left: 1rem;
     padding-right: 1rem;
+    position: relative;
+    text-align: center;
+  }
+  .property-card__features .counter{
+    font-weight: 700;
+    margin-top: .25rem;
   }
   .property-card__features .feature:first-child{
     padding-left: 0;
@@ -138,34 +201,66 @@ img {
   .property-card__features .counter{
     display: block;
   }
-  .property-card {
-    flex-wrap: nowrap;
-    max-width: 800px;
-  }
+
   .property-card__image {
     min-width: 295px;
     max-width: 310px;
   }
   .property-card__details {
+    align-items: flex-start;
+    justify-content: space-between;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    min-width: 282px;
   }
-}
+
+  .property-card__footer{
+     flex-wrap: wrap;
+  }
+
+  .reviews-number{
+    font-size: .875rem;
+  }
+
+  .property-card__rating{
+    font-size: .875rem;
+    flex: 1 0 100%;
+    margin-bottom: .25rem;
+  }
+
+  .property-card.property-card--simple .property-card__details {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
 
 
 
-.property-card.property-card--simple h4,
-.property-card.property-card--simple .property-card__rating{
-  display: none;
-}
+  .property-card.property-card--simple h4,
+  .property-card.property-card--simple .property-card__rating{
+    display: block;
+  }
+  .property-card.property-card--simple .property-card__features,
+  .property-card.property-card--simple .property-card__rating{
+    width: 100%;
+  }
 
-.property-card.property-card--simple .property-card__price{
-  order: 1;
-}
-.property-card.property-card--simple .property-card__features{
-  order: 2;
-}
+  .property-card.property-card--simple .property-card__features{
+    order: 1;
+  }
+  .property-card.property-card--simple .property-card__rating{
+    order: 2;
+    margin-bottom: -1rem;
+  }
+  .property-card.property-card--simple .property-card__price{
+    order: 3;
+  }
+  .property-card.property-card--simple .property-card__reviews{
+    order: 4;
+  }
 
-.property-card.property-card--simple .property-card__reviews{
-  order: 3;
+  .property-card.property-card--simple .property-card__price strong{
+    font-size: 1.125rem;
+  }
+
 }

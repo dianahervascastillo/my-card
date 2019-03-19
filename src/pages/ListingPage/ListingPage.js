@@ -4,7 +4,6 @@ import PropertyCard from "../../components/PropertyCard";
 
 export default class ListingPage extends React.Component {
   render() {
-    console.log("ListingPage", this.props.listings);
     return (
       <Fragment>
         <ul className='listing'>
@@ -22,9 +21,6 @@ export default class ListingPage extends React.Component {
             return <li key={index}><PropertyCardSimple property={property} /></li>;
           })}
         </ul>
-
-
-
       </Fragment>
     );
   }
