@@ -4,7 +4,7 @@ export default class PropertyCard extends PureComponent {
   render() {
     const Property = this.props.property;
     return (
-      <div className="property-card">
+      <div className="property-card property-card--simple">
         <div className="property-card__image">
           <img src={Property.listingThumbNail} alt={Property.listingTitle} />
         </div>

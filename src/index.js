@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ListingPage isMobile={this.state} listings={Listings} />
+        <ListingPage listings={Listings} {...this.state} />
       </div>
     );
   }
