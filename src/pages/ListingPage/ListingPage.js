@@ -11,10 +11,6 @@ export default class ListingPage extends React.Component {
     return (
       <Fragment>
         {this.props.listings.properties.map((property, index) => {
-          return <PropertyCardSimple key={index} property={property} />;
-        })}
-
-        {this.props.listings.properties.map((property, index) => {
           return (
             <PropertyCard
               key={index}
@@ -22,6 +18,10 @@ export default class ListingPage extends React.Component {
               isMobile={this.props.isMobile}
             />
           );
+        })}
+
+        {this.props.listings.properties.map((property, index) => {
+          return <PropertyCardSimple key={index} property={property} />;
         })}
       </Fragment>
     );

@@ -41,30 +41,38 @@ img {
 .property-card {
   display: flex;
   flex-wrap: wrap;
-  min-width: 260px;
   border: 1px solid red;
+  justify-content: center;
 }
 
+.property-card__image {
+  display: flex;
+  justify-content: center;
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
 .property-card__image img {
-  max-width: 260px;
+  width: 100%;
 }
 .property-card__details {
   padding-top: 0.5rem;
   padding-right: 1rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
+  width: 100%;
 }
 .property-card__features {
   list-style: none;
   padding-left: 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .property-card {
     flex-wrap: nowrap;
   }
-  .property-card__image img {
-    max-width: 295px;
+  .property-card__image {
+    min-width: 295px;
   }
   .property-card__details {
     padding-top: 1.5rem;

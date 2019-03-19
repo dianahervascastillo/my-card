@@ -39,8 +39,7 @@ export default class PropertyCard extends PureComponent {
       return (
         <Fragment>
           <div className="property-card__price">
-            {Property.currency}
-            {Property.price} avg/night
+            <h4>{Property.currency}{Property.price}</h4> avg/night
           </div>
           <ul className="property-card__features">
             <li className="feature">

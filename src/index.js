@@ -11,12 +11,12 @@ import "./styles.css";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isMobile: window.innerWidth < 480 };
+    this.state = { isMobile: window.innerWidth <= 480 };
     this.HandleWindowResize = this.handleWindowResize.bind(this);
   }
 
   handleWindowResize = () => {
-    this.setState({ isMobile: window.innerWidth < 480 });
+    this.setState({ isMobile: window.innerWidth <= 480 });
   };
 
   componentDidMount() {
