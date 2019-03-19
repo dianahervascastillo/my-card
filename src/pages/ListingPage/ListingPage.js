@@ -3,26 +3,28 @@ import PropertyCardSimple from "../../components/PropertyCardSimple";
 import PropertyCard from "../../components/PropertyCard";
 
 export default class ListingPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     console.log("ListingPage", this.props.listings);
     return (
       <Fragment>
-        {this.props.listings.properties.map((property, index) => {
-          return (
-            <PropertyCard
-              key={index}
-              property={property}
-              isMobile={this.props.isMobile}
-            />
-          );
-        })}
+        <ul className='listing'>
+          {this.props.listings.properties.map((property, index) => {
+            return (
+              <li key={index}><PropertyCard
+                property={property}
+                isMobile={this.props.isMobile}
+              /></li>
+            );
+          })}
+        </ul>
+        <ul className='listing'>
+          {this.props.listings.properties.map((property, index) => {
+            return <li key={index}><PropertyCardSimple property={property} /></li>;
+          })}
+        </ul>
 
-        {this.props.listings.properties.map((property, index) => {
-          return <PropertyCardSimple key={index} property={property} />;
-        })}
+
+
       </Fragment>
     );
   }
