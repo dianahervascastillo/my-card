@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import ListingPage from "../src/pages/ListingPage/ListingPage";
 
 // Data
-import Listings from "../mockdata/listing.json";
+import Listings from "../src/mockdata/listing.json";
 
 import "./styles.css";
 
