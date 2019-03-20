@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import throttle from "lodash.throttle";
 import ListingPage from "../src/pages/ListingPage/ListingPage";
 
 // Data
@@ -12,7 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMobile: window.innerWidth <= 650 };
-    this.HandleWindowResize = this.handleWindowResize.bind(this);
+    this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
   handleWindowResize = () => {

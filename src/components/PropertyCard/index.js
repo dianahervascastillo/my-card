@@ -68,11 +68,24 @@ export default class PropertyCard extends PureComponent {
     const Property = this.props.property;
     return (
       <div className="property-card property-card--complex">
-        <div className="property-card__image" style={{ backgroundImage: `url(${Property.listingThumbNail})` }} />
-        <div className="property-card__details">
-          {this.renderHeading(isMobile, Property)}
-          {this.renderFeatures(isMobile, Property)}
+        <div className="property-card__image" style={{ backgroundImage: `url(${Property.listingThumbNail})` }}>
+          <div className='carousel'>
+            <button className="carousel--previous" type='button'>
+              <svg width="24" height="14" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.118.263a.92.92 0 0 0-1.288 0L.293 10.8c-.176.176-.293.41-.293.644 0 .234.117.468.293.644l10.185 10.185c.176.176.41.293.644.293.234 0 .468-.117.644-.293a.92.92 0 0 0 0-1.288l-9.541-9.54 9.893-9.894a.92.92 0 0 0 0-1.288z"/>              </svg>
+            </button>
+            <button className="carousel--next" type="button">
+              <svg width="24" height="14" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.263.263a.92.92 0 0 1 1.288 0L12.088 10.8c.176.176.293.41.293.644 0 .234-.117.468-.293.644L1.903 22.273c-.176.176-.41.293-.644.293-.234 0-.468-.117-.644-.293a.92.92 0 0 1 0-1.288l9.541-9.54L.263 1.55a.92.92 0 0 1 0-1.288z"/>              </svg>
+            </button>
+          </div>
         </div>
+        <a className='property-link' href="#linktourlofproperty" target='_blank' aria-label='Opens link to Property page in new tab or window'>
+          <div className="property-card__details">
+            {this.renderHeading(isMobile, Property)}
+            {this.renderFeatures(isMobile, Property)}
+          </div>
+        </a>
       </div>
     );
   }
