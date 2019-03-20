@@ -37,6 +37,10 @@ In terms of structure, again I went for something simple. I do personally like t
 I think, in general, I've used about 6 hours for this test, and I've tried to be as quick as possible, and so very pragmatic.
 
 
+I've tested it using BroswersStack for ie11 (that's when I realised I was missing a polyfill!!) and locally with Firefox, Chrome, Safari
+
+
+
 
 ## Development
 
