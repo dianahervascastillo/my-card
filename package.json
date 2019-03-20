@@ -5,11 +5,16 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@babel/polyfill": "^7.4.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-scripts": "2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -19,7 +24,7 @@
   "browserslist": [
     ">0.2%",
     "not dead",
-    "not ie <= 11",
+    "not ie < 11",
     "not op_mini all"
   ]
 }

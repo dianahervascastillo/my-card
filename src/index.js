@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import '@babel/polyfill';
 import ListingPage from "../src/pages/ListingPage/ListingPage";
 
 // Data
 import Listings from "../src/mockdata/listing.json";
 
 import "./styles.css";
+
 
 class App extends React.Component {
   constructor(props) {
